@@ -2,6 +2,7 @@ package task2b
 
 object Compose extends App:
 
-  def compose(f: Int => Int, g: Int => Int): Int => Int =
-    (a: Int) => f(g(a))       // a is an integer input that is firstly passed to g then to f
+  // a is an integer input that is firstly passed to g then to f
+  def compose[A,B,C](f: B => C, g: A => B): A => C = a => f(g(a))
 
+  println(compose[Double, Double, Double](_ + 1, _ * 3)(2.06))
