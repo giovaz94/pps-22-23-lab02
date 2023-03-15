@@ -1,9 +1,11 @@
 package task2a
 
-object Negative extends App:
+object Negate extends App:
   /*def neg[A](in: A => Boolean): A => Boolean = _ match
     case x if in(x) => false
     case _ => true */
 
-  def neg[A](in: A => Boolean): A => Boolean = !in(_)
   //val neg: (String => Boolean) => (String => Boolean) = p => !p(_)
+
+  def neg[A](in: A => Boolean): A => Boolean = !in(_)
+
