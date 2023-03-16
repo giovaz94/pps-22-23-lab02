@@ -1,6 +1,8 @@
-package task3
+package task4
+
 
 import scala.annotation.tailrec
+
 
 enum Shape :
   case Rectangle(p1: Point2D, p2: Point2D)
@@ -22,6 +24,8 @@ object Shape extends App:
 
 
   def distance(p1: Point2D, p2: Point2D): Double = (p1, p2) match
+    case (Point2D(x1, y1), Point2D(x2, y2)) if x1 == x2 => Math.abs(y2 - y1)
+    case (Point2D(x1, y1), Point2D(x2, y2)) if y1 == y2 => Math.abs(x2 - x1)
     case (Point2D(x1, y1), Point2D(x2, y2)) => Math.sqrt(Math.pow(2, x2 - x1) + Math.pow(2, y2 - y1))
 
 
