@@ -4,7 +4,6 @@ enum Option[A]:
   case Some(a: A)
   case None()
 
-
 object Option:
 
   def isEmpty[A](opt: Option[A]): Boolean = opt match
@@ -28,7 +27,7 @@ object Option:
     case _ => None()
 
   def fold[A](opt: Option[A])(d: A)(f: A => A): A = opt match
-    case Some(a) if !isEmpty(Some(a)) => f(a)
+    case Some(a) => f(a)
     case _ => d
 
 
