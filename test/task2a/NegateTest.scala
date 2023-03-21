@@ -3,6 +3,8 @@ package task2a
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
+import org.junit.*;
+
 import Negate.*
 
 class NegateTest:
